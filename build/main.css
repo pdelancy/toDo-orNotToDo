@@ -1,0 +1,35 @@
+body {
+  background-color: red;
+}
+
+.list {
+
+  background-color: white;
+  border: solid;
+  border-width: 10px;
+  border-color: cyan;
+
+  height: 70%;
+  padding: 20px;
+}
+
+form.todoInput {
+
+  padding: 5px;
+  position: relative;
+
+}
+
+.inputText {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+}
+
+.submitInput {
+  position: absolute;
+  height: 30px;
+  right: 15px;
+  top: 15px;
+
+}
