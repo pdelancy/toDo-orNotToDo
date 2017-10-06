@@ -18,15 +18,30 @@ class ToDoApp extends React.Component {
   }
 
   componentDidMount(){
+
     this.setState({
       todos: this.state.todos.concat(dummyData)
     })
   }
+
+  addTodo(e, str){
+
+    e.preventDefault();
+    console.log(e.target.value)
+    dummyData = dummyData.concat({taskText: str, completed: false});
+    this.setState({todos: dummyData});
+  }
+
+  removeTodo(index){
+    dummyData = dummyData.slice(0, index).concat(dummyData.slice(index+1, dummyData.length));
+    this.setState({todos: dummyData})
+  }
+
   render() {
     return(
       <div className= 'list'>
-        <InputLine />
-        <ToDoList todos = {this.state.todos}/>
+        <InputLine submit={this.addTodo.bind(this)}/>
+        <ToDoList todos = {this.state.todos} todoXClick={this.removeTodo.bind(this)}/>
       </div>
     )
   }

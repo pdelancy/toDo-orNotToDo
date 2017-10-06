@@ -13,23 +13,22 @@ body {
   padding: 20px;
 }
 
-form.todoInput {
-
-  padding: 5px;
+.todoInput {
   position: relative;
-
 }
 
 .inputText {
   width: 100%;
-  height: 30px;
-  border-radius: 5px;
+  height: 100%;
 }
 
 .submitInput {
+
   position: absolute;
-  height: 30px;
-  right: 15px;
-  top: 15px;
+  height: 100%;
+
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
 
 }
