@@ -26,7 +26,7 @@ class InputLine extends React.Component {
 
     return (
       <div className= 'todoInput'  >
-        <textarea className='inputText' type='text' onChange = {(e) => this.handleTyping(e)} value={this.state.typedText} placeholder="What is on your agenda?" />
+        <textarea className='inputText' type='text' name='task' onChange = {(e) => this.handleTyping(e)} value={this.state.typedText} placeholder="What is on your agenda?" />
         <button className='submitInput' onClick = {(e) => this.handleSubmit(e)}> Submit</button>
       </div>
     )
